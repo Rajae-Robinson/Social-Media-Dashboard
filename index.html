@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="./styles/css/style.css">  
+  <title>Frontend Mentor | [Social Media Theme Switcher]</title>
+
+</head>
+<body>
+  <div class="container">
+    <!-- ----------HEADER------ -->
+    <header class="header d-md-flex justify-content-md-between">
+      <span class="header-before"></span>
+      <div class="header__top">
+        <h1>
+          Social Media Dashboard
+        </h1>
+        <p class="header__total-followers">
+          Total Followers: 23,004
+        </p>
+      </div>
+
+      <div class="header__bottom d-flex justify-content-between 
+      align-items-center no-gutters">
+        <p class="dark-mode-text">
+          Dark Mode
+        </p>
+        <label for="mode" class="toggle-mode">
+          <input type="checkbox" id="mode" class="toggle__input">
+          <span class="toggle-btn mt-2"></span>
+        </label>
+      </div>
+    </header>
+
+
+    <!-- -----FOLLOWERS CONTAINER------ -->
+    <div class="followers-container row justify-content-between 
+    no-gutters mt-3">
+      <!-- ------ FACEBOOK FOLLOWERS --------  -->
+      <div class="followers-container__followers-info followers-container__followers-facebook 
+      col-md-2 hover-light">
+        <div class="followers-container__follower-handle">
+          <img src="images/icon-facebook.svg" alt="facebook icon">
+          <p class="followers-container__username">
+            @nathanf
+          </p>
+        </div>
+        <div class="followers-container__followers-count">
+          <p><span class="followers-container__followers-count--font-size">
+            1987
+          </span></p>
+          <p>
+            Followers
+          </p>
+        </div>
+        <div class="followers-container__change-in-follower">
+          <img src="images/icon-up.svg" alt="icon-up">
+          <p class="increase-text">
+            12 Today
+          </p>
+        </div>
+      </div>
+
+      <!-- ------TWITTER FOLLOWERS------  -->
+      <div class="followers-container__followers-info followers-container__followers-twitter 
+      col-md-2 hover-light">
+        <div class="followers-container__follower-handle">
+          <img src="images/icon-twitter.svg" alt="twitter icon">
+          <p class="followers-container__username">
+            @nathanf
+          </p>
+        </div>
+        <div class="followers-container__followers-count">
+          <p><span class="followers-container__followers-count--font-size">
+            1044
+          </span></p>
+          <p>
+            Followers
+          </p>
+        </div>
+        <div class="followers-container__change-in-follower">
+          <img src="images/icon-up.svg" alt="icon up">
+          <p class="increase-text">
+            99 Today
+          </p>
+        </div>
+      </div>
+
+
+      <!-- ------INSTAGRAM FOLLOWERS----- -->
+      <div class="followers-container__followers-info followers-container__followers-instagram 
+      col-md-2 hover-light">
+        <div class="followers-container__follower-handle">
+          <img src="images/icon-instagram.svg" alt="instagram icon">
+          <p class="followers-container__username">
+            @realnathanf
+          </p>
+        </div>
+        <div class="followers-container__followers-count">
+          <p><span class="followers-container__followers-count--font-size">
+            11k
+          </span></p>
+          <p>
+            Followers
+          </p>
+        </div>
+        <div class="followers-container__change-in-follower">
+          <img src="images/icon-up.svg" alt="icon up">
+          <p class="increase-text">
+            1099 Today
+          </p>
+        </div>
+      </div>
+      
+      <!-- ------YOUTUBE SUBSCRIBERS------ -->
+      <div class="followers-container__followers-info followers-container__followers-youtube 
+      col-md-2 hover-light">
+        <div class="followers-container__follower-handle">
+          <img src="images/icon-youtube.svg" alt="youtube icon">
+          <p class="followers-container__username">
+            Nathan F.
+          </p>
+        </div>
+        <div class="followers-container__followers-count">
+          <p><span class="followers-container__followers-count--font-size">
+            8239
+          </span></p>
+          <p>
+            Subscribers
+          </p>
+        </div>
+        <div class="followers-container__change-in-follower">
+          <img src="images/icon-down.svg" alt="icon down">
+          <p class="decrease-text">
+            144 Today
+          </p>
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- -----------OVERVIEW CONTAINER --------- -->
+    <div class="overview-container mt-4">
+      <h2 class="overview-container-heading">
+        Overview - Today
+      </h2>
+      <div class="overview-content mt-4">
+        <!-- ROW 1 -->
+        <div class="overview-content-row overview-content--row1">
+          <!-- COL 1 FACEBOOK PAGE VIEWS -->
+          <div class ="overview-content-col 
+          hover-light col-md-2">
+            <!-- TOP -->
+            <div class="overview-content-col-top">
+              <p class="overview-content-col-text">
+                Page Views
+              </p>
+              <img src="images/icon-facebook.svg" alt="facebook icon">
+            </div>
+
+            <!-- BOTTOM -->
+            <div class="overview-content-col-bottom">
+              <p class="overview-content-col-follower-count">
+                87
+              </p>
+              <div class="overview-content-col-follower-change">
+                <img src="images/icon-up.svg" alt="icon up">
+                <p class="increase-text">
+                  3%
+                </p>
+              </div>
+            </div>  
+          </div>
+
+          <!-- COL 2 FACEBOOK LIKES -->
+          <div class ="overview-content-col 
+          col-md-2 hover-light">
+            <!-- TOP -->
+            <div class="overview-content-col-top">
+              <p class="overview-content-col-text">
+                Likes
+              </p>
+              <img src="images/icon-facebook.svg" alt="facebook icon">
+            </div>
+
+            <!-- BOTTOM -->
+            <div class="overview-content-col-bottom">
+              <p class="overview-content-col-follower-count">
+                52
+              </p>
+              <div class="overview-content-col-follower-change">
+                <img src="images/icon-down.svg" alt="icon up">
+                <p class="decrease-text">
+                  2%
+                </p>
+              </div>
+            </div>  
+          </div>
+
+          <!-- COL 3 INSTAGRAM LIKES -->
+          <div class ="overview-content-col 
+          col-md-2 hover-light">
+            <!-- TOP -->
+            <div class="overview-content-col-top">
+              <p class="overview-content-col-text">
+                Likes
+              </p>
+              <img src="images/icon-instagram.svg" alt="instagram icon">
+            </div>
+
+            <!-- BOTTOM -->
+            <div class="overview-content-col-bottom">
+              <p class="overview-content-col-follower-count">
+                5462
+              </p>
+              <div class="overview-content-col-follower-change">
+                <img src="images/icon-up.svg" alt="icon up">
+                <p class="increase-text">
+                  2257%
+                </p>
+              </div>
+            </div>  
+          </div>
+
+          <!-- COL 4 INSTAGRAM PROFILE VIEWS -->
+          <div class ="overview-content-col 
+          col-md-2 hover-light">
+            <!-- TOP -->
+            <div class="overview-content-col-top">
+              <p class="overview-content-col-text">
+                Profile Views
+              </p>
+              <img src="images/icon-instagram.svg" alt="instagram icon">
+            </div>
+
+            <!-- BOTTOM -->
+            <div class="overview-content-col-bottom">
+              <p class="overview-content-col-follower-count">
+                52k
+              </p>
+              <div class="overview-content-col-follower-change">
+                <img src="images/icon-up.svg" alt="icon up">
+                <p class="increase-text">
+                  1375%
+                </p>
+              </div>
+            </div>  
+          </div>
+        </div> <!--row 1 ends here-->
+
+
+        <!-- ------ROW 2---- -->
+        <div class="overview-content-row overview-content--row2">
+          <!-- COL 1 TWITTER RETWEETS -->
+          <div class ="overview-content-col 
+          col-md-2 hover-light">
+            <!-- TOP -->
+            <div class="overview-content-col-top">
+              <p class="overview-content-col-text">
+                Retweets
+              </p>
+              <img src="images/icon-twitter.svg" alt="twitter icon">
+            </div>
+
+            <!-- BOTTOM -->
+            <div class="overview-content-col-bottom">
+              <p class="overview-content-col-follower-count">
+                117
+              </p>
+              <div class="overview-content-col-follower-change">
+                <img src="images/icon-up.svg" alt="icon up">
+                <p class="increase-text">
+                  303%
+                </p>
+              </div>
+            </div>  
+          </div>
+
+          <!-- COL 2 TWITTER LIKES -->
+          <div class ="overview-content-col 
+          col-md-2 hover-light">
+            <!-- TOP -->
+            <div class="overview-content-col-top">
+              <p class="overview-content-col-text">
+                Likes
+              </p>
+              <img src="images/icon-twitter.svg" alt="twitter icon">
+            </div>
+
+            <!-- BOTTOM -->
+            <div class="overview-content-col-bottom">
+              <p class="overview-content-col-follower-count">
+                507
+              </p>
+              <div class="overview-content-col-follower-change">
+                <img src="images/icon-up.svg" alt="icon up">
+                <p class="increase-text">
+                  553%
+                </p>
+              </div>
+            </div>  
+          </div>
+
+          <!-- COL 3 YOUTUBE LIKES -->
+          <div class ="overview-content-col 
+          col-md-2 hover-light">
+            <!-- TOP -->
+            <div class="overview-content-col-top">
+              <p class="overview-content-col-text">
+                Likes
+              </p>
+              <img src="images/icon-youtube.svg" alt="youtube icon">
+            </div>
+
+            <!-- BOTTOM -->
+            <div class="overview-content-col-bottom">
+              <p class="overview-content-col-follower-count">
+                107
+              </p>
+              <div class="overview-content-col-follower-change">
+                <img src="images/icon-down.svg" alt="icon up">
+                <div class="decrease-text">
+                  19%
+                </div>
+              </div>
+            </div>  
+          </div>
+          
+          <!-- COL 4 YOUTUBE VIEWS -->
+          <div class ="overview-content-col 
+          col-md-2 hover-light">
+            <!-- TOP -->
+            <div class="overview-content-col-top">
+              <p class="overview-content-col-text">
+                Total Views
+              </p>
+              <img src="images/icon-youtube.svg" alt="youtube icon">
+            </div>
+
+            <!-- BOTTOM -->
+            <div class="overview-content-col-bottom">
+              <p class="overview-content-col-follower-count">
+                1407
+              </p>
+              <div class="overview-content-col-follower-change">
+                <img src="images/icon-down.svg" alt="icon up">
+                <p class="decrease-text">
+                  12%
+                </p>
+              </div>
+            </div>  
+          </div>
+        </div> <!-- end of row 2 -->
+      </div> <!--overview-content-->
+    </div> <!--overview-container-->
+  </div> <!--container-->
+
+  <!-- Jquery -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<!-- Popper.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<!-- Bootstrap.js -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box; }
+
+/* -------Primary Colors------------ */
+/* ------Light Theme------- */
+/* -----Dark Theme-------*/
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; }
+
+/* -----------toggling dark and light mode ------ */
+/* Light mode is default mode */
+.toggle-mode {
+  display: inline-block;
+  vertical-align: top;
+  align-self: center; }
+  .toggle-mode .toggle__input {
+    display: none; }
+  .toggle-mode .toggle-btn {
+    position: relative;
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 20px;
+    background-color: #aeb3cb;
+    color: white;
+    width: 40px;
+    height: 20px;
+    transition: all 0.1s ease;
+    cursor: pointer;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; }
+    .toggle-mode .toggle-btn::before {
+      position: absolute;
+      content: '';
+      display: inline-block;
+      right: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 12px;
+      width: 12px;
+      border-radius: 100%;
+      background-color: white;
+      transition: all 0.8s ease; }
+  .toggle-mode .toggle__input:checked + .toggle-btn {
+    background: linear-gradient(to right, #378fe6, #3eda82);
+    border: 1px solid linear-gradient(to right, #378fe6, #3eda82); }
+  .toggle-mode .toggle__input:checked + .toggle-btn::before {
+    left: 5px;
+    background-color: #1e202a; }
+
+/* -------------------------------------------
+---------- LAYOUT -----------------------
+------------------------------------------ */
+/* -------header------ */
+.header {
+  position: relative;
+  /* TOP BACKGROUND BEHIND HEADER */ }
+  .header .header-before {
+    background-color: #f5f7ff;
+    position: absolute;
+    content: '';
+    top: 0;
+    left: -20%;
+    width: 140%;
+    height: 140%;
+    z-index: -1;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px; }
+
+.followers-container__followers-info,
+.overview-content-col {
+  background-color: #f0f2fa;
+  border-radius: 10px;
+  margin-bottom: 1em; }
+
+/* ------ followers container -------- */
+.followers-container {
+  /* adding colored border at top of followers cards */ }
+  .followers-container .followers-container__followers-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .followers-container .followers-container__follower-handle {
+    display: flex;
+    align-items: center; }
+    .followers-container .followers-container__follower-handle .followers-container__username {
+      margin-top: 0.8em; }
+    .followers-container .followers-container__follower-handle > img {
+      margin-right: 4px; }
+  .followers-container .followers-container__followers-count {
+    text-align: center; }
+  .followers-container .followers-container__followers-facebook {
+    border-top: 3px solid #198ff5; }
+  .followers-container .followers-container__followers-twitter {
+    border-top: 3px solid #1ca0f2; }
+  .followers-container .followers-container__followers-youtube {
+    border-top: 3px solid #c4032a; }
+  .followers-container .followers-container__followers-instagram {
+    position: relative; }
+    .followers-container .followers-container__followers-instagram::before {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      content: '';
+      background: linear-gradient(to right, #fdc468, #df4996);
+      top: -3px;
+      left: 0;
+      border-radius: 10px;
+      z-index: -1; }
+
+.followers-container__change-in-follower,
+.overview-content-col-follower-change {
+  display: flex;
+  align-items: center; }
+  .followers-container__change-in-follower > img,
+  .overview-content-col-follower-change > img {
+    margin-right: -0.9em; }
+  .followers-container__change-in-follower .increase-text,
+  .overview-content-col-follower-change .increase-text {
+    color: #1db489; }
+  .followers-container__change-in-follower .decrease-text,
+  .overview-content-col-follower-change .decrease-text {
+    color: #dc414c; }
+  .followers-container__change-in-follower .increase-text, .followers-container__change-in-follower .decrease-text,
+  .overview-content-col-follower-change .increase-text,
+  .overview-content-col-follower-change .decrease-text {
+    padding: 1.2em; }
+
+/* ------overview content ----- */
+.overview-container .overview-content-col-top,
+.overview-container .overview-content-col-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em;
+  align-items: flex-end; }
+
+.overview-container .overview-content-col-bottom .overview-content-col-follower-change > p {
+  padding-right: 0; }
+
+/* ------- HOVER EFFECT FOR ALL CARDS --------- */
+.hover-light:hover {
+  background-color: #d6dbf0; }
+
+/* -------------------------------------------
+---------- LAYOUT FOR LARGE SCREENS -----------------------
+------------------------------------------ */
+@media screen and (min-width: 720px) {
+  /* -------- header ------- */
+  header .header__total-followers {
+    border-bottom: none; }
+  header .header-before {
+    height: 220%; }
+  /* ------ overview-container ------ */
+  .overview-container {
+    flex-direction: column; }
+    .overview-container .overview-content-row {
+      display: flex;
+      justify-content: space-between; }
+    .overview-container .overview-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; } }
+
+/* -------------------------------------------
+---------- TYPOGRAPHY -----------------------
+------------------------------------------ */
+h1, .header__total-followers, p {
+  margin: 0; }
+
+h1 {
+  padding-top: 1.25em;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1e202a; }
+
+.overview-container-heading {
+  color: #63687e;
+  font-weight: 700;
+  font-size: 1.5rem; }
+
+p {
+  color: #63687e;
+  font-weight: 400; }
+
+.header__total-followers,
+.dark-mode-text {
+  font-weight: 700; }
+
+.header__total-followers {
+  margin-top: 0.25em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #63687e; }
+
+.followers-container__followers-count--font-size {
+  font-size: 3rem;
+  color: #1e202a;
+  font-weight: 700; }
+
+.followers-container__follower-handle > p {
+  font-weight: 700; }
+
+.followers-container__followers-count > p:last-child,
+.followers-container__followers-count > p:first-child {
+  margin: 0; }
+
+.followers-container__followers-count > p:last-child {
+  letter-spacing: 0.25em;
+  font-size: 1rem;
+  margin-top: -8px; }
+
+.overview-content-col-text {
+  font-weight: 700; }
+
+.overview-content-col-follower-count {
+  font-size: 1.7rem;
+  color: #1e202a;
+  font-weight: 700; }
+
+.increase-text,
+.decrease-text {
+  font-weight: 700;
+  font-size: 0.7rem; }
+
+/* -------------------------------------------
+---------- TEXT FOR LARGE SCREENS -----------------------
+------------------------------------------ */
+@media screen and (min-width: 720px) {
+  .dark-mode-text {
+    margin: 0;
+    align-self: center;
+    margin-right: 10px; }
+  .followers-container__followers-count--font-size {
+    font-size: 2.5rem; }
+  .followers-container__followers-count > p:last-child {
+    font-size: 0.8rem; }
+  .overview-content-col-follower-count {
+    font-size: 1rem; } }
+
+@media screen and (min-width: 1024px) {
+  .followers-container__followers-count--font-size {
+    font-size: 3rem; }
+  .followers-container__followers-count > p:last-child {
+    letter-spacing: 0.25em;
+    font-size: 1rem;
+    margin-top: -8px; } }
+
+/* -------------------------------------------
+---------- DARK MODE CLASSES -----------------------
+------------------------------------------ */
+.text-dark {
+  color: #8b97c6 !important; }
+
+.dark-body {
+  background-color: #1e202a; }
+
+.dark-card-bg {
+  background-color: #252a41; }
+
+.dark-header-bg {
+  background-color: #1f212e !important; }
+
+.hover-dark:hover {
+  background-color: #2e3552; }
+
+.text-white {
+  color: white; }
